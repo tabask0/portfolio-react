@@ -4,6 +4,7 @@ import { FaHtml5, FaNode, FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import yachting from "@/public/yachting.png";
 import crypto from "@/public/crypto.png";
+import mobile from "@/public/mobile.png";
 import kita from "@/public/kita.png";
 import {  FaCss3Alt, FaJs, FaNodeJs, FaGit, FaReacteurope, FaNpm, FaBootstrap, FaDatabase, FaAws, FaDotCircle } from 'react-icons/fa';
 import { SiTypescript, SiTailwindcss, SiAntdesign, SiFramer, SiMongodb, SiPrisma, SiGraphql, SiI18Next, SiAmazonaws, SiAzuredevops } from 'react-icons/si';
@@ -91,21 +92,28 @@ export const projectsData = [
   {
     title: "Meer Kindergarten",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Recat Native", ".NET", "Vue", "Razor", "Styled Components"],
+      "A kindergarden management platform where parents can check-in their children, attend events or appointments and many others features.",
+    tags: ["React", ".NET", "Vue", "Razor", "Bootstrap", "Styled Components"],
     imageUrl: kita,
+  },
+  {
+    title: "Meer Kindergarten Mobile",
+    description:
+      "A big part of the previous kindergarden project was the mobile app made with React Native.",
+    tags: ["React", "React Native", "Styled Components", "Tailwind"],
+    imageUrl: mobile,
   },
   {
     title: "Crypto",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
+      "This is a personal app I developed back in the days regarding the crypto market with real time updates.",
+    tags: ["React", "TypeScript", "Next.js"],
     imageUrl: crypto,
   },{
     title: "Global Yachting Croatia",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
+      "The possibility of booking a personal yacht with a 'captain' for friends and families that wanna go on an adventure on the sea!",
+    tags: ["React", "MongoDB", "Tailwind", "Email.js"],
     imageUrl: yachting,
   },
   

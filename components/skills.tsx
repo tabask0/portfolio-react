@@ -20,8 +20,22 @@ const fadeInAnimationVariants = {
   }),
 };
 
+const randomColor = () =>
+  "#" + Math.floor(Math.random() * 16777215).toString(16);
+
 export default function Skills() {
   const { ref } = useSectionInView("Skills");
+
+  const [gradientColors, setGradientColors] = useState({
+    color1: "",
+    color2: "",
+  });
+
+  const handleHover = () => {
+    const color1 = randomColor();
+    const color2 = randomColor();
+    setGradientColors({ color1, color2 });
+  };
 
   return (
     <section
@@ -38,6 +52,11 @@ export default function Skills() {
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
+            whileHover={{
+              background: `linear-gradient(135deg, ${gradientColors.color1} 0%, ${gradientColors.color2} 100%)`,
+              scale: 1.15,
+            }}
+            onHoverStart={handleHover}
             viewport={{
               once: true,
             }}

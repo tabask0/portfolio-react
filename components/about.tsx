@@ -6,19 +6,36 @@ import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 
 export default function About() {
-  const { ref } = useSectionInView("About");
+  const { ref, inView } = useSectionInView("About"); // Include inView
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.2,
+        when: "beforeChildren",
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
 
   return (
     <motion.section
       ref={ref}
       className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.175 }}
+      variants={containerVariants}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"} // Use inView to control animation
       id="about"
     >
       <SectionHeading>About me</SectionHeading>
-      <p className="mb-3">
+      <motion.p variants={itemVariants} className="mb-3">
         After graduating with a degree in{" "}
         <span className="font-medium">Informatics</span>, I decided to pursue my
         passion for programming. I started as a frontend developer and went
@@ -32,12 +49,12 @@ export default function About() {
         technologies. I am currently looking for a{" "}
         <span className="font-bold">fullstack job/colaboration</span> as a
         software developer.
-      </p>
+      </motion.p>
 
-      <p>
+      <motion.p variants={itemVariants}>
         <span>When I'm not coding</span>, I enjoy playing video games, riding my
         motorcycle, and playing with my cat.
-      </p>
+      </motion.p>
     </motion.section>
   );
 }

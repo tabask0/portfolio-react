@@ -2,6 +2,7 @@ import { useActiveSectionContext } from "@/context/active-section-context";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import type { SectionName } from "./types";
+import {useState} from 'react';
 
 export function useSectionInView(sectionName: SectionName, threshold = 0.75) {
   const { ref, inView } = useInView({
@@ -14,8 +15,13 @@ export function useSectionInView(sectionName: SectionName, threshold = 0.75) {
       setActiveSection(sectionName);
     }
   }, [inView, setActiveSection, timeOfLastClick, sectionName]);
+  const [isIntersecting, setIsIntersecting] = useState(false);
+
+  useEffect(() => {
+    setIsIntersecting(inView);
+  }, [inView]);
 
   return {
-    ref,
+    ref, inView: isIntersecting
   };
 }
