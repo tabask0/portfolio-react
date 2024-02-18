@@ -30,14 +30,13 @@ export default function About() {
       ref={ref}
       className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
       variants={containerVariants}
-      initial="hidden"
       animate={inView ? "visible" : "hidden"} // Use inView to control animation
       id="about"
     >
       <SectionHeading>About me</SectionHeading>
       <motion.p variants={itemVariants} className="mb-3">
         After graduating with a degree in{" "}
-        <span className="font-medium">Informatics</span>, I decided to pursue my
+        <span className="font-medium">Informatics</span>, I started to pursue my
         passion for programming. I started as a frontend developer and went
         right into{" "}
         <span className="font-medium">full-stack web development</span>. My
