@@ -6,8 +6,30 @@ import yachting from "@/public/yachting.png";
 import crypto from "@/public/crypto.png";
 import mobile from "@/public/mobile.png";
 import kita from "@/public/kita.png";
-import {  FaCss3Alt, FaJs, FaNodeJs, FaGit, FaReacteurope, FaNpm, FaBootstrap, FaDatabase, FaAws, FaDotCircle } from 'react-icons/fa';
-import { SiTypescript, SiTailwindcss, SiAntdesign, SiFramer, SiMongodb, SiPrisma, SiGraphql, SiI18Next, SiAmazonaws, SiAzuredevops } from 'react-icons/si';
+import {
+  FaCss3Alt,
+  FaJs,
+  FaNodeJs,
+  FaGit,
+  FaReacteurope,
+  FaNpm,
+  FaBootstrap,
+  FaDatabase,
+  FaAws,
+  FaDotCircle,
+} from "react-icons/fa";
+import {
+  SiTypescript,
+  SiTailwindcss,
+  SiAntdesign,
+  SiFramer,
+  SiMongodb,
+  SiPrisma,
+  SiGraphql,
+  SiI18Next,
+  SiAmazonaws,
+  SiAzuredevops,
+} from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import { GrGraphQl } from "react-icons/gr";
 import { SiMicrosoftazure } from "react-icons/si";
@@ -16,7 +38,6 @@ import { TbBrandRedux } from "react-icons/tb";
 import { SiRsocket } from "react-icons/si";
 import { MdStyle } from "react-icons/md";
 import { SiStyledcomponents } from "react-icons/si";
-
 
 export const links = [
   {
@@ -109,14 +130,14 @@ export const projectsData = [
       "This is a personal app I developed back in the days regarding the crypto market with real time updates.",
     tags: ["React", "TypeScript", "Next.js"],
     imageUrl: crypto,
-  },{
+  },
+  {
     title: "Global Yachting Croatia",
     description:
       "The possibility of booking a personal yacht with a 'captain' for friends and families that wanna go on an adventure on the sea!",
     tags: ["React", "MongoDB", "Tailwind", "Email.js"],
     imageUrl: yachting,
   },
-  
 ] as const;
 
 export const skillsData = [
@@ -146,5 +167,4 @@ export const skillsData = [
   { name: "Azure", icon: SiMicrosoftazure },
   { name: ".NET", icon: SiDotnet },
   { name: "Styled Components", icon: SiStyledcomponents },
-
 ] as const;
