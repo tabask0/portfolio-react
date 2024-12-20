@@ -45,14 +45,12 @@ export default function About() {
         stack is{" "}
         <span className="font-medium">React, Node.js, and MongoDB</span>. I am
         also familiar with TypeScript. I am always looking to learn new
-        technologies. I am currently looking for a{" "}
-        <span className="font-bold">fullstack job/colaboration</span> as a
-        software developer.
+        technologies.
       </motion.p>
 
       <motion.p variants={itemVariants}>
-        <span>When I'm not coding</span>, I enjoy playing video games, riding my
-        motorcycle, and playing with my cat.
+        <span>When I'm not coding</span>, I enjoy playing video games and ride
+        my motorcycle.
       </motion.p>
     </motion.section>
   );
