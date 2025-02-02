@@ -10,6 +10,7 @@ import toast from "react-hot-toast";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
+  console.log(ref);
 
   return (
     <motion.section
@@ -30,7 +31,7 @@ export default function Contact() {
       }}
     >
       <SectionHeading>Contact me</SectionHeading>
-
+      dfgdfg fghfghf
       <p className="text-gray-700 -mt-6 dark:text-white/80">
         Please contact me directly at{" "}
         <a className="underline" href="mailto:example@gmail.com">
@@ -38,7 +39,6 @@ export default function Contact() {
         </a>{" "}
         or through this form.
       </p>
-
       <form
         className="mt-10 flex flex-col dark:text-black"
         action={async (formData) => {
